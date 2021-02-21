@@ -50,20 +50,20 @@ namespace University_Classroom.Scripts
             
             if (Input.GetKey(KeyCode.W))
             {
-                transform.Translate(new Vector3(0, 0, moveAmount), Space.World);
+                transform.Translate(new Vector3(0, 0, moveAmount));
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                transform.Translate(new Vector3(0, 0, -moveAmount), Space.World);
+                transform.Translate(new Vector3(0, 0, -moveAmount));
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                transform.Translate(new Vector3(moveAmount, 0, 0), Space.World);
+                transform.Translate(new Vector3(moveAmount, 0, 0));
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                transform.Translate(new Vector3(-moveAmount, 0, 0), Space.World);
+                transform.Translate(new Vector3(-moveAmount, 0, 0));
             }
             
 
