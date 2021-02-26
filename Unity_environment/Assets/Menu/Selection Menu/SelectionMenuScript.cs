@@ -12,7 +12,7 @@ namespace Menu.Selection_Menu
 
         public void SceneSettings()
         {
-            SceneManager.LoadScene("Scene Configuration Scene");
+            SceneManager.LoadScene("Lecture Hall");
         }
     
     }

@@ -33,20 +33,20 @@ namespace University_Classroom.Scripts
 
             if (Input.GetKeyDown(KeyCode.Minus))
             {
-                baseMoveFactor = Math.Abs(baseMoveFactor - 0.002f);
+                baseMoveFactor = Math.Max(baseMoveFactor - 0.002f, 0);
             }
             else if (Input.GetKeyDown(KeyCode.Equals))
             {
-                baseMoveFactor = Math.Abs(baseMoveFactor + 0.002f);
+                baseMoveFactor += 0.002f;
             }
             
             if (Input.GetKeyDown(KeyCode.LeftBracket))
             {
-                rotationFactor = Math.Abs(rotationFactor - 0.02f);
+                rotationFactor = Math.Max(rotationFactor - 0.02f, 0);
             }
             else if (Input.GetKeyDown(KeyCode.RightBracket))
             {
-                rotationFactor = Math.Abs(rotationFactor + 0.02f);
+                rotationFactor += 0.02f;
             }
             
             var rotation = sceneCamera.transform.eulerAngles;

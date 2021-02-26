@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Menu/Selection Menu/Selection Scene.unity
     guid: 139b01ee02a23204bbd032c13258f379
   - enabled: 1
-    path: Assets/Menu/Scene Config Menu/Scene Configuration Scene.unity
-    guid: fcb038357d4cfcb43ad74069a0bba0b7
-  - enabled: 1
     path: Assets/University Classroom/Scene/Lecture Hall.unity
     guid: 82025188e223f224abc91d51a85b9994
   m_configObjects: {}
