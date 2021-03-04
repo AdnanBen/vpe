@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 294710039}
   - component: {fileID: 294710038}
   - component: {fileID: 294710040}
+  - component: {fileID: 294710041}
   m_Layer: 5
   m_Name: Classroom
   m_TagString: Untagged
@@ -552,6 +553,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tog: {fileID: 294710039}
   uiComponent: {fileID: 919480449}
+--- !u!114 &294710041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294710036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c62c76c0149c4a8c8ea1b49dcbb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Classroom
 --- !u!1 &300382666
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +915,7 @@ GameObject:
   - component: {fileID: 696101958}
   - component: {fileID: 696101959}
   - component: {fileID: 696101960}
+  - component: {fileID: 696101961}
   m_Layer: 5
   m_Name: LectureTheatre
   m_TagString: Untagged
@@ -950,7 +965,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5372549, g: 0.88232344, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.5372549, g: 0.88235295, b: 1, a: 1}
     m_SelectedColor: {r: 0.5372549, g: 0.882353, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1020,6 +1035,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tog: {fileID: 696101958}
   uiComponent: {fileID: 2089620133}
+--- !u!114 &696101961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696101956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c62c76c0149c4a8c8ea1b49dcbb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Grand LT
 --- !u!1 &812009317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2249,7 @@ GameObject:
   - component: {fileID: 1475117326}
   - component: {fileID: 1475117327}
   - component: {fileID: 1475117328}
+  - component: {fileID: 1475117329}
   m_Layer: 5
   m_Name: Student Showcase
   m_TagString: Untagged
@@ -2340,6 +2369,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tog: {fileID: 1475117326}
   uiComponent: {fileID: 876804113}
+--- !u!114 &1475117329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475117324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c62c76c0149c4a8c8ea1b49dcbb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Student Showcase
 --- !u!1 &1517581476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,6 +2394,7 @@ GameObject:
   - component: {fileID: 1517581478}
   - component: {fileID: 1517581479}
   - component: {fileID: 1517581480}
+  - component: {fileID: 1517581481}
   m_Layer: 5
   m_Name: ConferenceRoom
   m_TagString: Untagged
@@ -2471,6 +2514,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tog: {fileID: 1517581478}
   uiComponent: {fileID: 824131976}
+--- !u!114 &1517581481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517581476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c62c76c0149c4a8c8ea1b49dcbb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Conference
 --- !u!1 &1545816379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,6 +2768,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Next Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6598365642437949581, guid: 1e8f3f4a092861e45b6fe078cbf452c8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2092587555}
+    - target: {fileID: 6598365642437949581, guid: 1e8f3f4a092861e45b6fe078cbf452c8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: nextButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6598365642437949582, guid: 1e8f3f4a092861e45b6fe078cbf452c8,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -2741,6 +2807,7 @@ GameObject:
   - component: {fileID: 1865387098}
   - component: {fileID: 1865387097}
   - component: {fileID: 1865387096}
+  - component: {fileID: 1865387099}
   m_Layer: 5
   m_Name: SmallLT
   m_TagString: Untagged
@@ -2860,6 +2927,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1865387099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865387094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c62c76c0149c4a8c8ea1b49dcbb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Small LT
 --- !u!1 &1892449580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,6 +3256,7 @@ GameObject:
   - component: {fileID: 2025576354}
   - component: {fileID: 2025576353}
   - component: {fileID: 2025576355}
+  - component: {fileID: 2025576356}
   m_Layer: 5
   m_Name: ConferencePanel
   m_TagString: Untagged
@@ -3295,6 +3376,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tog: {fileID: 2025576354}
   uiComponent: {fileID: 96776396}
+--- !u!114 &2025576356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025576351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c62c76c0149c4a8c8ea1b49dcbb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Conference Panel
 --- !u!1001 &2026286257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3579,7 +3673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2089620134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3636,6 +3730,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089620133}
   m_CullTransparentMesh: 0
+--- !u!1 &2092587553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092587554}
+  - component: {fileID: 2092587555}
+  m_Layer: 0
+  m_Name: ButtonScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092587554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092587553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 293372191}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2092587555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092587553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9e99cb4781050419080d50d875687a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGroupObject: {fileID: 1650278756}
 --- !u!1 &2122547529
 GameObject:
   m_ObjectHideFlags: 0

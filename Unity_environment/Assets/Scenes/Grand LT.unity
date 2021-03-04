@@ -3918,8 +3918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caae9de73eb8e2f4fbcb1393b5aa1693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentName: Desktop Share Board
-  enabledByDefault: 1
+  componentName: Desktop Capture
+  enabledByDefault: 0
 --- !u!4 &1036302148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011474108562, guid: de6f36e446e5e8a48bf61fe198985bb4,
@@ -6599,6 +6599,7 @@ MonoBehaviour:
   baseMoveFactor: 0.01
   shiftModifier: 3
   rotationFactor: 0.1
+  movement: 0
 --- !u!20 &1648179732
 Camera:
   m_ObjectHideFlags: 0
@@ -6624,7 +6625,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 55.515667
+  field of view: 55
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

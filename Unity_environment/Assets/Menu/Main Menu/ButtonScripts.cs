@@ -1,19 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Menu.Main_Menu
 {
     public class ButtonScripts : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        public GameObject toggleGroupObject;
 
-        // Update is called once per frame
-        void Update()
-        {
+        private GameObject _selectedScene;
         
+        
+
+        public void nextButton()
+        {
+            var toggleGroup = toggleGroupObject.GetComponent<ToggleGroup>();
+            var selectedScene = toggleGroup.ActiveToggles().First().GetComponent<SceneRelation>().scene;
+            SceneManager.LoadScene(selectedScene);
+
         }
     }
 }

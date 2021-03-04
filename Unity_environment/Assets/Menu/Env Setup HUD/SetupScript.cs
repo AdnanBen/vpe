@@ -93,13 +93,13 @@ namespace Menu.Env_Setup_HUD
         
         public void HudLoadPrevScene()
         {
-            SceneManager.LoadScene("Selection Scene");
+            SceneManager.LoadScene("Welcome");
         }
 
         public void HudConfirmSceneConfig()
         {
             DisableSceneConfigHud();
-            sceneCamera.transform.position = defaultCameraPos;
+            // sceneCamera.transform.position = defaultCameraPos;
             sceneCamera.GetComponent<RotateMoveCamera>().EnableMovement();
         }
         
