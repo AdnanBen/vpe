@@ -35,7 +35,7 @@ namespace Menu.Env_Setup_HUD
         }
         
         
-        private void EnableSceneConfigHud()
+        public void EnableSceneConfigHud()
         {
             if (!_hudInitDone)
             {
