@@ -14,6 +14,7 @@ namespace Menu.Env_Setup_HUD
         public Camera sceneCamera;
         public GameObject hudToggleParent;
         public GameObject sceneConfigHud;
+        public GameObject dropDownMenuButton;
         
         private bool _hudInitDone;
         private readonly Dictionary<GameObject, GameObject> _toggleComponentMap = new Dictionary<GameObject, GameObject>();
@@ -101,6 +102,7 @@ namespace Menu.Env_Setup_HUD
             DisableSceneConfigHud();
             // sceneCamera.transform.position = defaultCameraPos;
             sceneCamera.GetComponent<RotateMoveCamera>().EnableMovement();
+            dropDownMenuButton.SetActive(true);
         }
         
 
