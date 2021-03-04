@@ -50,6 +50,7 @@ namespace University_Classroom.Scripts
             }
             
             var rotation = sceneCamera.transform.eulerAngles;
+
             
             if (Input.GetKey(KeyCode.UpArrow))
             {
@@ -109,6 +110,34 @@ namespace University_Classroom.Scripts
                 transform.Translate(new Vector3(0, -moveAmount/2, 0), Space.World);
             }
 
+        }
+
+
+        void OnTriggerEnter(Collider other) {
+            Debug.Log("1");
+            var rotation = sceneCamera.transform.eulerAngles;
+            sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
+            sceneCamera.GetComponent<Rigidbody>().isKinematic = false;
+            rotation.z = 0;
+            sceneCamera.transform.eulerAngles = rotation;
+        }
+
+        void OnTriggerStay(Collider other) {
+            Debug.Log("2");
+            var rotation = sceneCamera.transform.eulerAngles;
+            sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
+            sceneCamera.GetComponent<Rigidbody>().isKinematic = false;
+            rotation.z = 0;
+            sceneCamera.transform.eulerAngles = rotation;
+        }
+
+        void OnTriggerExit(Collider other) {
+            Debug.Log("3");
+            var rotation = sceneCamera.transform.eulerAngles;
+            sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
+            sceneCamera.GetComponent<Rigidbody>().isKinematic = false;
+            rotation.z = 0;
+            sceneCamera.transform.eulerAngles = rotation;
         }
     }
 }
