@@ -6576,6 +6576,9 @@ GameObject:
   - component: {fileID: 1648179733}
   - component: {fileID: 1648179732}
   - component: {fileID: 1648179728}
+  - component: {fileID: 1648179731}
+  - component: {fileID: 1648179730}
+  - component: {fileID: 1648179729}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -6596,10 +6599,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneCamera: {fileID: 1648179727}
-  baseMoveFactor: 0.01
+  baseMoveFactor: 0.05
   shiftModifier: 3
-  rotationFactor: 0.1
+  rotationFactor: 0.5
   movement: 0
+--- !u!135 &1648179729
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648179727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &1648179730
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648179727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1648179731
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648179727}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!20 &1648179732
 Camera:
   m_ObjectHideFlags: 0
@@ -7964,6 +8009,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1848127057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1859248873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1092978958206844, guid: 60133c804d61c8d458f4d8df2080fc58,
+    type: 3}
+  m_PrefabInstance: {fileID: 110165653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1859248876
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859248873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8ac422d9a6b609a4d8d188325252229b, type: 3}
 --- !u!1 &1909006355
 GameObject:
   m_ObjectHideFlags: 0
