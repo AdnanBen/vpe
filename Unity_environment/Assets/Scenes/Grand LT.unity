@@ -6596,6 +6596,8 @@ GameObject:
   - component: {fileID: 1648179731}
   - component: {fileID: 1648179730}
   - component: {fileID: 1648179729}
+  - component: {fileID: 1648179734}
+  - component: {fileID: 1648179735}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -6719,6 +6721,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648179734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648179727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2a8578e3ccc458288ada4c768e16b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1648179727}
+  timeDown: 0.3
+--- !u!114 &1648179735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648179727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516307d176d2a4e0cb812231096803da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveObject:
+    mapName: 
+    cameraAngles: []
+    activeComponents: []
+  optionalComponentContainer: {fileID: 548429264}
 --- !u!1001 &1677969120
 PrefabInstance:
   m_ObjectHideFlags: 0
