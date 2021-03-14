@@ -21,6 +21,14 @@ public class ToggleImage : MonoBehaviour
     }
 
     public void onToggleChange() {
-        uiComponent.SetActive(!uiComponent.activeSelf);
+        // checks if image is active, and does the opposite on a toggle change
+        // incorrect, needs to be set active when toggle is on and inactive when toggle is off.
+        if(tog.isOn){
+            uiComponent.SetActive(true);
+        }
+        else {
+            uiComponent.SetActive(false);
+        }
+        
     }
 }
