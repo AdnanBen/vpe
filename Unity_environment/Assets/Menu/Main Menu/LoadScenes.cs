@@ -12,6 +12,11 @@ public class LoadScenes : MonoBehaviour
         ("Conference Room", "meetings"),
         ("Small LT", "tutorials"),
         ("Exam Room", "exams"),
+        ("Conference Panel", "discussion"),
+        ("Grand LT", "teaching"),
+        ("Conference Room", "meetings"),
+        ("Small LT", "tutorials"),
+        ("Exam Room", "exams"),
         ("Conference Panel", "discussion")
     };
 
@@ -42,9 +47,9 @@ public class LoadScenes : MonoBehaviour
     {
         // stretching the scroll panel depending on how many elements in the list
 
-        if (savedScenes.Count > 4)
+        if (savedScenes.Count > 3)
         {
-            panelGameObj.offsetMin = new Vector2(panelGameObj.offsetMin.x, (savedScenes.Count - 4) * -75);
+            panelGameObj.offsetMin = new Vector2(panelGameObj.offsetMin.x, (savedScenes.Count - 3) * -75);
         }
 
 
@@ -54,7 +59,7 @@ public class LoadScenes : MonoBehaviour
         foreach (var scene in savedScenes)
         {
 
-            GameObject toggle = (GameObject)Instantiate(togglePrefab);
+            GameObject toggle = (GameObject)Instantiate(togglePrefab, panelGameObj, false);
             toggle.transform.SetParent(panelGameObj.transform);
             toggle.GetComponentInChildren<Text>().text = $"{scene.Item1} |\n {scene.Item2}";
             toggle.name = scene.Item1 + "|" + scene.Item2;
