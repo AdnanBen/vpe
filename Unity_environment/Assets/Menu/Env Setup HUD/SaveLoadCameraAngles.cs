@@ -1,21 +1,21 @@
 using UnityEngine;
 
-namespace University_Classroom.Scripts
+namespace Menu.Env_Setup_HUD
 {
     public class SaveLoadCameraAngles : MonoBehaviour
     {
-        public new GameObject camera = null;
+        public GameObject camera = null;
         public float timeDown = 0.3f;
         private float time = 0f;
 
-        struct cameraPosition 
+        public struct cameraPosition 
         {
             public Vector3 position;
             public float rotationx;
             public float rotationy;
         }
         
-        cameraPosition[] cameraPositions = new cameraPosition[11];
+        public cameraPosition[] cameraPositions = new cameraPosition[11];
 
         void Update()
         {
