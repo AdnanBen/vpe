@@ -1,9 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Menu.SaveManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using University_Classroom.Scripts;
+using static Menu.SaveManager.SaveObject;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Menu.Env_Setup_HUD
 {
@@ -12,18 +15,17 @@ namespace Menu.Env_Setup_HUD
         
         public GameObject optionalComponentContainer;
         public Camera sceneCamera;
-        public GameObject hudToggleParent;
+        public GameObject configParent;
         public GameObject sceneConfigHud;
         public GameObject dropDownMenuButton;
-        
+        public GameObject togglePrefab;
+
         private bool _hudInitDone;
         private readonly Dictionary<GameObject, GameObject> _toggleComponentMap = new Dictionary<GameObject, GameObject>();
+        
+        private const int DefaultToggleSpacing = -120;
+        private const int ConfigSpacing = -70;
 
-        private static Vector3 defaultCameraPos = new Vector3(10f, 2f, 8f);
-        
-        private int _toggleCount = 1;
-        
-        // Start is called before the first frame update
         void Start()
         {
             SceneConfig();
@@ -49,17 +51,53 @@ namespace Menu.Env_Setup_HUD
             }
         }
 
+        public void LoadCameraAngles(SaveLoadCameraAngles.CameraPosition[] angles)
+        {
+            sceneCamera.GetComponent<SaveLoadCameraAngles>().cameraPositions = angles;
+        }
+        
+        
         private void HudSetup()
         {
+            LoadSettings.settingsPresent = true;
+            LoadSettings.loadFileName = "test.txt";
+            
+            SaveObject saveObj = null;
+            if (LoadSettings.settingsPresent)
+            {
+                saveObj = SaveUtils.Load(LoadSettings.loadFileName);
+                var cameraAngles = saveObj.cameraPositions;
+                LoadCameraAngles(cameraAngles);
+                
+                // reset load settings
+                LoadSettings.settingsPresent = false;
+                LoadSettings.loadFileName = null;
+            }
 
+            Vector3 nextComponentPos = togglePrefab.transform.position;
+            
             foreach (Transform child in optionalComponentContainer.transform)
             {   
                 
                 GameObject optionalComponent = child.gameObject;
                 ComponentInfo info = optionalComponent.GetComponent<ComponentInfo>();
                 
-                // Get next ui toggle to populate
-                GameObject toggle = hudToggleParent.transform.GetChild(_toggleCount++ - 1).gameObject;
+                // Create new ui toggle
+                var toggle = Instantiate(togglePrefab, nextComponentPos, 
+                    Quaternion.identity, configParent.transform);
+
+
+                var config = optionalComponent.GetComponent<ComponentConfigurator>();
+                if (config != null)
+                {
+                    nextComponentPos += new Vector3(0, ConfigSpacing, 0);
+                    if (config is DesktopConfigurator deskConf)
+                    {
+                        deskConf.DrawConfigurationUI(configParent, nextComponentPos);
+                    }
+                }
+                nextComponentPos += new Vector3(0, DefaultToggleSpacing, 0);
+                
                 toggle.GetComponentsInChildren<Text>()[0].text = info.componentName;
                 toggle.SetActive(true);
                 
@@ -74,21 +112,20 @@ namespace Menu.Env_Setup_HUD
                     var obj = _toggleComponentMap[toggle];
                     obj.SetActive(!obj.activeSelf);
                 });
-                
-                // Enable if component on by default
-                toggleUIObject.isOn = info.enabledByDefault;
-
-            }
-        }
         
-
-        
-        private void DisableSceneConfigHud()
-        {
-            if (_hudInitDone)
-            {
-                sceneConfigHud.SetActive(false);
+                // Enable if component in save config else if on by default
+                bool enable;
+                if (LoadSettings.settingsPresent && saveObj != null)
+                {
+                    enable = saveObj.activeComponents.Contains(info.internalName);
+                }
+                else
+                {
+                    enable = info.enabledByDefault;
+                }
+                toggleUIObject.isOn = enable;
             }
+            
         }
         
         
@@ -100,18 +137,16 @@ namespace Menu.Env_Setup_HUD
         public void HudConfirmSceneConfig()
         {
             DisableSceneConfigHud();
-            // sceneCamera.transform.position = defaultCameraPos;
             sceneCamera.GetComponent<RotateMoveCamera>().EnableMovement();
             dropDownMenuButton.SetActive(true);
         }
         
-
-        // Update is called once per frame
-        void Update()
+        private void DisableSceneConfigHud()
         {
-        
+            if (_hudInitDone)
+            {
+                sceneConfigHud.SetActive(false);
+            }
         }
-        
-        
     }
 }

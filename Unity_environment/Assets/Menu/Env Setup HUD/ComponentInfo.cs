@@ -6,6 +6,8 @@ namespace Menu.Env_Setup_HUD
     {
         public string componentName;
         public bool enabledByDefault = true;
-    
+        public string internalName;
+
+
     }
 }

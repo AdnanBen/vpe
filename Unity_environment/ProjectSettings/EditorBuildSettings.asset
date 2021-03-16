@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Menu/Old/Selection Menu/Selection Scene.unity
     guid: 139b01ee02a23204bbd032c13258f379
   - enabled: 1
-    path: Assets/Menu/Main Menu/Welcome.unity
+    path: Assets/Scenes/Welcome.unity
     guid: fdfb483c48536714391e26e3e467d1c9
   - enabled: 1
     path: Assets/Scenes/Grand LT.unity

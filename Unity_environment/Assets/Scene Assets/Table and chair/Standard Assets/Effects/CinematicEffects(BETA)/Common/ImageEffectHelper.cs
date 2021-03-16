@@ -12,9 +12,7 @@ namespace UnityStandardAssets.CinematicEffects
                 Debug.LogWarningFormat("Missing shader for image effect {0}", effect);
                 return false;
             }
-
-            if (!SystemInfo.supportsImageEffects || !SystemInfo.supportsRenderTextures)
-                return false;
+            
 
             if (needDepth && !SystemInfo.SupportsRenderTextureFormat(RenderTextureFormat.Depth))
                 return false;

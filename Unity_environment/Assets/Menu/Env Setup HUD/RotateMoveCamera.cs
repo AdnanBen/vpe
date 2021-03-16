@@ -123,7 +123,6 @@ namespace University_Classroom.Scripts
         }
 
         void OnTriggerStay(Collider other) {
-            Debug.Log("2");
             var rotation = sceneCamera.transform.eulerAngles;
             sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
             sceneCamera.GetComponent<Rigidbody>().isKinematic = false;
@@ -132,7 +131,6 @@ namespace University_Classroom.Scripts
         }
 
         void OnTriggerExit(Collider other) {
-            Debug.Log("3");
             var rotation = sceneCamera.transform.eulerAngles;
             sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
             sceneCamera.GetComponent<Rigidbody>().isKinematic = false;

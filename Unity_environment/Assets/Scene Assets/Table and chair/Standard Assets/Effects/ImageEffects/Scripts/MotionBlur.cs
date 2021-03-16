@@ -18,16 +18,7 @@ namespace UnityStandardAssets.ImageEffects
         public bool extraBlur = false;
 
         private RenderTexture accumTexture;
-
-        override protected void Start()
-        {
-            if (!SystemInfo.supportsRenderTextures)
-            {
-                enabled = false;
-                return;
-            }
-            base.Start();
-        }
+        
 
         override protected void OnDisable()
         {
