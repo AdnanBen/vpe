@@ -11,14 +11,18 @@ namespace Menu.Main_Menu
 
         private GameObject _selectedScene;
         
-        
-
-        public void nextButton()
+        public void OnNextButton()
         {
             var toggleGroup = toggleGroupObject.GetComponent<ToggleGroup>();
             var selectedScene = toggleGroup.ActiveToggles().First().GetComponent<SceneRelation>().scene;
             SceneManager.LoadScene(selectedScene);
 
         }
+
+        public void OnExitButton()
+        {
+            Application.Quit();
+        }
+        
     }
 }

@@ -22,7 +22,7 @@ namespace UnityStandardAssets.ImageEffects
         // settings
         public MotionBlurFilter filterType = MotionBlurFilter.Reconstruction;
         public bool  preview = false;				// show how blur would look like in action ...
-        public Vector3 previewScale = Vector3.one;	// ... given this movement vector
+        public Vector3 previewScale = Vector3.one;	// ... given this allowMovement vector
 
         // params
         public float movementScale = 0.0f;

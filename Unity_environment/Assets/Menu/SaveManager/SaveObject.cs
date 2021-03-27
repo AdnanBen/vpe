@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using static Menu.Env_Setup_HUD.SaveLoadCameraAngles;
+using static Menu.Scene_Config_Menu.CameraScripts.SaveLoadCameraAngles;
 
 namespace Menu.SaveManager
 {
