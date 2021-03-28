@@ -6747,9 +6747,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516307d176d2a4e0cb812231096803da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1648179727}
   saveObject:
     mapName: 
-    cameraAngles: []
+    cameraPositions:
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
+    - position: {x: 0, y: 0, z: 0}
+      rotationx: 0
+      rotationy: 0
     activeComponents: []
   optionalComponentContainer: {fileID: 548429264}
 --- !u!1001 &1677969120
