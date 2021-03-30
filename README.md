@@ -17,7 +17,7 @@
 
 **Setting URL to self hosted web app:**
 1. Run the built application once and close
-2. Navigate to install folder, Config/config.json file and replace URL
+2. Navigate to install folder, Config/config.json file and replace URL if you would not like to use our deployment.
 
 ## User Manual
 
