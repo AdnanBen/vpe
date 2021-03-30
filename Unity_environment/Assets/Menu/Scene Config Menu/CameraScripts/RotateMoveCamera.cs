@@ -7,9 +7,9 @@ namespace Menu.Scene_Config_Menu.CameraScripts
     {
         public GameObject sceneCamera = null;
 
-        public float baseMoveFactor = 0.01f;
-        public float shiftModifier = 3;
-        public float rotationFactor = 0.1f;
+        private float baseMoveFactor = 0.05f;
+        private float modifierKey = 3;
+        private float rotationFactor = 0.5f;
 
         public static bool allowMovement = false;
 
@@ -22,7 +22,7 @@ namespace Menu.Scene_Config_Menu.CameraScripts
         {
             allowMovement = false;
         }
-
+        
         void Update()
         {
             
@@ -30,7 +30,8 @@ namespace Menu.Scene_Config_Menu.CameraScripts
             {
                 return;
             }
-
+            
+            // Movement sensitivity controls 
             if (Input.GetKeyDown(KeyCode.Minus))
             {
                 baseMoveFactor = Math.Max(baseMoveFactor - 0.002f, 0);
@@ -40,6 +41,7 @@ namespace Menu.Scene_Config_Menu.CameraScripts
                 baseMoveFactor += 0.002f;
             }
             
+            // Look sensitivity controls 
             if (Input.GetKeyDown(KeyCode.LeftBracket))
             {
                 rotationFactor = Math.Max(rotationFactor - 0.02f, 0);
@@ -49,9 +51,8 @@ namespace Menu.Scene_Config_Menu.CameraScripts
                 rotationFactor += 0.02f;
             }
             
+            // Look controls 
             var rotation = sceneCamera.transform.eulerAngles;
-
-            
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 // Pitch up
@@ -65,23 +66,25 @@ namespace Menu.Scene_Config_Menu.CameraScripts
 
             if (Input.GetKey(KeyCode.LeftArrow))
             {
+                // Look left
                 rotation.y += -rotationFactor;
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
+                // Look right
                 rotation.y += rotationFactor;
             }
-
             sceneCamera.transform.eulerAngles = rotation;
-
+            
+            
+            // Faster allowMovement when modifier key pressed
             var moveAmount = baseMoveFactor;
-            // Faster allowMovement when shift pressed
             if (Input.GetKey(KeyCode.Space))
             {
-                moveAmount *= shiftModifier;
+                moveAmount *= modifierKey;
             }
             
-            
+            // Movement 
             if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(new Vector3(0, 0, moveAmount));
@@ -100,7 +103,8 @@ namespace Menu.Scene_Config_Menu.CameraScripts
                 transform.Translate(new Vector3(-moveAmount, 0, 0));
             }
             
-
+            
+            // Vertical movement 
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 transform.Translate(new Vector3(0, moveAmount/2, 0), Space.World);
@@ -111,24 +115,23 @@ namespace Menu.Scene_Config_Menu.CameraScripts
             }
 
         }
-        
-        void OnTriggerEnter(Collider other) {
-            var rotation = sceneCamera.transform.eulerAngles;
-            sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
-            sceneCamera.GetComponent<Rigidbody>().isKinematic = false;
-            rotation.z = 0;
-            sceneCamera.transform.eulerAngles = rotation;
+
+
+        private void OnTriggerEnter(Collider other) {
+            PreventCameraEscape();
         }
 
-        void OnTriggerStay(Collider other) {
-            var rotation = sceneCamera.transform.eulerAngles;
-            sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
-            sceneCamera.GetComponent<Rigidbody>().isKinematic = false;
-            rotation.z = 0;
-            sceneCamera.transform.eulerAngles = rotation;
+        private void OnTriggerStay(Collider other) {
+            PreventCameraEscape();
         }
 
-        void OnTriggerExit(Collider other) {
+        private void OnTriggerExit(Collider other)
+        {
+            PreventCameraEscape();
+        }
+
+        private void PreventCameraEscape()
+        {
             var rotation = sceneCamera.transform.eulerAngles;
             sceneCamera.GetComponent<Rigidbody>().isKinematic = true;
             sceneCamera.GetComponent<Rigidbody>().isKinematic = false;

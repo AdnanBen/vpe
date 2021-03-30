@@ -1,4 +1,5 @@
-﻿using Menu.SaveManager;
+﻿using Menu.Main_Menu;
+using Menu.SaveManager;
 using Menu.Scene_Config_Menu;
 using Menu.Scene_Config_Menu.CameraScripts;
 using UnityEngine;
@@ -22,7 +23,8 @@ namespace Menu.DropDownMenu
 
 		public GameObject saveMenu;
 		public GameObject saveMenuInputText;
-	
+
+		private readonly string _webAppURL = ConfigManager.GetConfig().WebAppURL;
 
 		private void ToggleMenuOnState()
 		{
@@ -81,7 +83,7 @@ namespace Menu.DropDownMenu
 
 		public void OnMultiPresentButton() {
 			ToggleMenuOnState();
-			Application.OpenURL("https://presentr-video-chat.herokuapp.com");
+			Application.OpenURL(_webAppURL);
 		}
 	}
 }

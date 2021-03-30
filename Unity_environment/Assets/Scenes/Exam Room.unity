@@ -2540,9 +2540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneCamera: {fileID: 939005361}
-  baseMoveFactor: 0.05
-  shiftModifier: 3
-  rotationFactor: 0.5
 --- !u!20 &939005366
 Camera:
   m_ObjectHideFlags: 0
