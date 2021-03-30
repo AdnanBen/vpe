@@ -1,3 +1,7 @@
+# Abstract
+
+The transition from in person to online interactions has been incredibly difficult during the COVID-19 pandemic. Suddenly, we’re all required to carry out social gatherings, lectures, meetings and more over conferencing apps, and sitting at our computers all day is becoming increasingly boring. With VPE we’ve mitigated the negative impacts of this by creating a more engaging live medium for presenting information, to replace the current simple webcam and screenshare standard. VPE has various 3D virtual environments such as lecture halls and conference rooms, and allows one or more people to be rendered into the scene seamlessly, depicting them in a physical space. You can also configure the scene you choose, including the option to display a desktop behind you. No more dull, monotonous video calls!
+
 # Deployment Manual
 
 **Unity: Building**
