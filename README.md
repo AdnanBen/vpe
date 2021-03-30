@@ -75,7 +75,7 @@ b) If you do not have a green screen, select the correct webcam and enable the �
 c) Click “Join Call”
 d) Send URL to co-presenters, they must do steps b and c.
 
-**2\**. Create a new OBS scene in the bottom left panel by pressing “+” and select it
+**2.** Create a new OBS scene in the bottom left panel by pressing “+” and select it
 Add a new source, of type “Game Capture”, Set Mode to “Capture specific window” and Window to “[VPE.exe]”
 
 Manipulating sources:
