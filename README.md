@@ -79,8 +79,11 @@ d) Send URL to co-presenters, they must do steps b and c.
 Add a new source, of type “Game Capture”, Set Mode to “Capture specific window” and Window to “[VPE.exe]”
 
 Manipulating sources:
+
 To adjust size: Ensure the correct source is selected, then in the preview window: drag the red squares on edges of selected source.
+
 To reposition: Click and hold source in the preview, move to desired position.
+
 To crop: hold “Alt” key and drag squares like with size adjustment.
 
 Applying chroma key:
