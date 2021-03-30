@@ -75,7 +75,7 @@ b) If you do not have a green screen, select the correct webcam and enable the �
 c) Click “Join Call”
 d) Send URL to co-presenters, they must do steps b and c.
 
-2\. Create a new OBS scene in the bottom left panel by pressing “+” and select it
+**2\**. Create a new OBS scene in the bottom left panel by pressing “+” and select it
 Add a new source, of type “Game Capture”, Set Mode to “Capture specific window” and Window to “[VPE.exe]”
 
 Manipulating sources:
@@ -86,7 +86,7 @@ To crop: hold “Alt” key and drag squares like with size adjustment.
 Applying chroma key:
 Press “Filters”, add an Effect Filter of type “Chroma Key”
 
-**4\. To add yourself as a presenter, if you are using a greenscreen:** Add a new source, of type “Video Capture Device”. Manipulate as needed and add chroma key effect.  
-**5\. To add co-presenters and/or self if using background removal:** Add a new source, type “Window”, for Window select your browser window with the web app. Duplicate the source for each presenter, manipulate the source to crop onto the needed grid section of each presenter. Add chroma key effect.
+**3\. To add yourself as a presenter, if you are using a greenscreen:** Add a new source, of type “Video Capture Device”. Manipulate as needed and add chroma key effect.  
+**4\. To add co-presenters and/or self if using background removal:** Add a new source, type “Window”, for Window select your browser window with the web app. Duplicate the source for each presenter, manipulate the source to crop onto the needed grid section of each presenter. Add chroma key effect.
 
 If you have multiple saved camera angles in VPE, you can duplicate your OBS scene and reposition presenters as needed. You can set a hotkey to switch OBS scenes, for examples to the same keys as the saved camera angle, or to something more convenient like number pad keys. To do this: File > Settings > Hotkeys, scroll down to the target scene and set the “Switch to Scene Hotkey”.
